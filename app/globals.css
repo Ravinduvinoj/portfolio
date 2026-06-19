@@ -47,19 +47,7 @@
 
 @layer components {
   .section-padding {
-    @apply py-20 px-4;
-  }
-
-  @media (min-width: 768px) {
-    .section-padding {
-      @apply px-8;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .section-padding {
-      @apply px-16;
-    }
+    @apply py-20 px-4 md:px-8 lg:px-16;
   }
 
   .container-max {
@@ -77,7 +65,7 @@
   }
 
   .btn-primary {
-    @apply bg-primary text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 active:scale-95;
+    @apply bg-primary text-white px-6 py-3 rounded-xl font-semibold hover:bg-primary-dark transition-all duration-300 hover:scale-105 active:scale-95;
   }
 
   .btn-outline {
@@ -106,13 +94,7 @@
   }
 
   .section-title {
-    @apply text-3xl font-bold mb-2;
-  }
-
-  @media (min-width: 768px) {
-    .section-title {
-      @apply text-4xl;
-    }
+    @apply text-3xl md:text-4xl font-bold mb-2;
   }
 
   .section-subtitle {
