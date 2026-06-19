@@ -5,8 +5,7 @@ import { FiArrowRight, FiDownload, FiCode, FiServer, FiSmartphone, FiDatabase } 
 import { useEffect, useState } from "react";
 
 const roles = [
-  "Full Stack Developer",
-  "Asociate Software Engineer",
+  "Associate Software Engineer",
   "Mobile App Developer",
   "Gamer",
 ];

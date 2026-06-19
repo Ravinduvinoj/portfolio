@@ -4,11 +4,11 @@ import Link from "next/link";
 import { FiArrowRight, FiMapPin, FiMail, FiPhone } from "react-icons/fi";
 
 const personalInfo = [
-  { label: "Name", value: "Ravindu Vinoj" },
-  { label: "Role", value: "Full Stack Developer" },
+  { label: "Name", value: "Ravindu Wijerathna" },
+  { label: "Role", value: "Associate Software Engineer" },
   { label: "Location", value: "Sri Lanka" },
-  { label: "Email", value: "ravindu@example.com", icon: FiMail },
-  { label: "Phone", value: "+94 77 123 4567", icon: FiPhone },
+  { label: "Email", value: "ravinduvinoj.se@gmail.com", icon: FiMail },
+  { label: "Phone", value: "+94 75 487 9867", icon: FiPhone },
   { label: "Languages", value: "Sinhala, English" },
 ];
 

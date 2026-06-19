@@ -7,7 +7,7 @@ const education = [
     degree: "Bachelor of Science in Computer Science",
     institution: "University of Moratuwa",
     location: "Moratuwa, Sri Lanka",
-    period: "2019 – 2023",
+    period: "2026 – Present",
     grade: "Second Class Upper",
     description:
       "Focused on software engineering, algorithms, data structures, and distributed systems. Final year project: A real-time collaborative code editor built with React and WebSockets.",
@@ -16,37 +16,49 @@ const education = [
     type: "degree",
   },
   {
-    degree: "Advanced Level (A/L) – Physical Science",
-    institution: "Ananda College",
-    location: "Colombo, Sri Lanka",
-    period: "2016 – 2018",
-    grade: "3A passes",
+    degree: "Higher National Diploma in Information Technology (HND-IT)",
+    institution: "Sri Lanka Institute of Advanced Technological Education (SLIATE)",
+    location: "Gampaha, Sri Lanka",
+    period: "2022 – 2025",
+    grade: "General Pass",
+    description:
+      "Focused on software engineering, algorithms, data structures, and distributed systems. Final year project: A real-time collaborative code editor built with React and WebSockets.",
+    highlights: ["Data Structures & Algorithms", "Software Engineering", "Database Systems", "Computer Networks", "Distributed Systems"],
+    icon: "🎓",
+    type: "degree",
+  },
+  {
+    degree: "Advanced Level (A/L) – Engineering Technology Stream",
+    institution: "Kirindiwela Central College",
+    location: "Kirindiwela, Sri Lanka",
+    period: "2017 – 2020",
+    grade: "1C pass, 2S passes",
     description:
       "Studied Combined Mathematics, Physics, and ICT. Achieved top results in the district and secured placement at the University of Moratuwa.",
-    highlights: ["Combined Mathematics", "Physics", "ICT"],
+    highlights: ["Science For Technology", "Engineering Technology", "ICT"],
     icon: "📚",
     type: "school",
   },
   {
     degree: "Ordinary Level (O/L)",
-    institution: "Ananda College",
-    location: "Colombo, Sri Lanka",
-    period: "2014 – 2016",
-    grade: "9A passes",
+    institution: "Vidyaloka National College",
+    location: "Veyangoda, Sri Lanka",
+    period: "2006 – 2017",
+    grade: "1A pass, 1B pass, 4C passes, 3S passes",
     description:
       "Completed O/Ls with distinction in all 9 subjects, with a strong aptitude for mathematics and science.",
-    highlights: ["Mathematics", "Science", "ICT", "English"],
+    highlights: ["Mathematics", "Science", "Sinhala", "English"],
     icon: "🏫",
     type: "school",
   },
 ];
 
 const certifications = [
-  { name: "AWS Certified Developer – Associate", issuer: "Amazon Web Services", year: "2024", icon: "☁️" },
-  { name: "Meta Front-End Developer Professional Certificate", issuer: "Meta / Coursera", year: "2023", icon: "📘" },
-  { name: "Node.js Application Development (LFW211)", issuer: "The Linux Foundation", year: "2023", icon: "🟢" },
-  { name: "MongoDB Developer Certification", issuer: "MongoDB University", year: "2022", icon: "🍃" },
-  { name: "Google UX Design Certificate", issuer: "Google / Coursera", year: "2022", icon: "🎨" },
+  // { name: "AWS Certified Developer – Associate", issuer: "Amazon Web Services", year: "2024", icon: "☁️" },
+  // { name: "Meta Front-End Developer Professional Certificate", issuer: "Meta / Coursera", year: "2023", icon: "📘" },
+  // { name: "Node.js Application Development (LFW211)", issuer: "The Linux Foundation", year: "2023", icon: "🟢" },
+  // { name: "MongoDB Developer Certification", issuer: "MongoDB University", year: "2022", icon: "🍃" },
+  { name: "Graphic Designing", issuer: "Univercity Of Kelaniya", year: "2023", icon: "🎨" },
 ];
 
 export default function Education() {
@@ -93,7 +105,6 @@ export default function Education() {
                       </div>
                     </div>
                   </div>
-
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/30 text-accent text-sm font-semibold mb-4">
                     <FiAward size={13} /> {edu.grade}
                   </div>

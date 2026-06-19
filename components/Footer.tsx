@@ -21,7 +21,7 @@ export default function Footer() {
               <span className="text-primary">Ravindu</span>
               <span className="text-accent"> Wijerathna</span>
             </div>
-            <p className="text-sm text-[var(--text-secondary)]">Full Stack Developer · Sri Lanka</p>
+            <p className="text-sm text-[var(--text-secondary)]">Associate Software Engineer · Sri Lanka</p>
           </div>
 
           <div className="flex items-center gap-4">
