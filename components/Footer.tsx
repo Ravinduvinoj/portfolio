@@ -1,11 +1,14 @@
 import Link from "next/link";
-import { FiGithub, FiLinkedin, FiTwitter, FiMail } from "react-icons/fi";
+import { AiFillTikTok } from "react-icons/ai";
+import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiYoutube } from "react-icons/fi";
 
 const socials = [
-  { icon: FiGithub, href: "https://github.com/ravinduvinoj", label: "GitHub" },
-  { icon: FiLinkedin, href: "https://linkedin.com/in/ravinduvinoj", label: "LinkedIn" },
-  { icon: FiTwitter, href: "https://twitter.com/ravinduvinoj", label: "Twitter" },
-  { icon: FiMail, href: "mailto:ravindu@example.com", label: "Email" },
+  { icon: FiGithub, href: "https://github.com/Ravinduvinoj", label: "GitHub" },
+  { icon: FiLinkedin, href: "https://www.linkedin.com/in/ravindu-wijerathna-b299b325a", label: "LinkedIn" },
+  { icon: FiTwitter, href: "https://twitter.com/ravinduvinoj1", label: "Twitter" },
+  { icon: AiFillTikTok, href: "https://vt.tiktok.com/ZSQc6P1uY", label: "TikTok" },
+  { icon: FiYoutube, href: "https://www.youtube.com/@ravinduvinoj", label: "YouTube" },
+  { icon: FiMail, href: "mailto:ravinduvinoj.se@gmail.com", label: "Email" },
 ];
 
 export default function Footer() {
@@ -16,7 +19,7 @@ export default function Footer() {
           <div>
             <div className="text-2xl font-bold mb-1">
               <span className="text-primary">Ravindu</span>
-              <span className="text-accent"> Vinoj</span>
+              <span className="text-accent"> Wijerathna</span>
             </div>
             <p className="text-sm text-[var(--text-secondary)]">Full Stack Developer · Sri Lanka</p>
           </div>
@@ -38,7 +41,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-[var(--border)] flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-[var(--text-secondary)]">
-          <p>© {new Date().getFullYear()} Ravindu Vinoj. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Ravindu Wijerathna. All rights reserved.</p>
           <p>
             Built with{" "}
             <span className="text-primary font-medium">Next.js</span> &{" "}

@@ -1,27 +1,28 @@
 "use client";
 
 import Link from "next/link";
-import { FiArrowRight, FiDownload, FiCode, FiServer, FiSmartphone } from "react-icons/fi";
+import { FiArrowRight, FiDownload, FiCode, FiServer, FiSmartphone, FiDatabase } from "react-icons/fi";
 import { useEffect, useState } from "react";
 
 const roles = [
   "Full Stack Developer",
-  "React / Next.js Dev",
-  "Node.js Engineer",
-  "UI/UX Enthusiast",
+  "Asociate Software Engineer",
+  "Mobile App Developer",
+  "Gamer",
 ];
 
 const stats = [
-  { label: "Years Experience", value: "3+" },
-  { label: "Projects Completed", value: "20+" },
+  { label: "Years Experience", value: "1+" },
+  { label: "Projects Completed", value: "5+" },
   { label: "Technologies", value: "15+" },
-  { label: "Happy Clients", value: "10+" },
+  { label: "Happy Clients", value: "5+" },
 ];
 
 const quickLinks = [
-  { icon: FiCode, label: "Frontend", desc: "React, Next.js, TypeScript", href: "/skills" },
-  { icon: FiServer, label: "Backend", desc: "Node.js, Express, Python", href: "/skills" },
+  { icon: FiCode, label: "Frontend", desc: "React, Next.js, Angular, TypeScript", href: "/skills" },
+  { icon: FiServer, label: "Backend", desc: "Node.js, Express, Python, C#, Java", href: "/skills" },
   { icon: FiSmartphone, label: "Mobile", desc: "React Native, Flutter", href: "/skills" },
+  { icon: FiDatabase, label: "Databse", desc: "Sql, Pg-Sql, MongoDB, Sql-lite", href: "/skills" },
 ];
 
 export default function Home() {
@@ -69,7 +70,7 @@ export default function Home() {
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4">
                 Hi, I'm{" "}
-                <span className="gradient-text block">Ravindu Vinoj</span>
+                <span className="gradient-text block">Ravindu Wijerathna.</span>
               </h1>
 
               <div className="text-2xl md:text-3xl font-semibold text-[var(--text-secondary)] mb-6 h-10">
@@ -78,7 +79,7 @@ export default function Home() {
               </div>
 
               <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-10 max-w-xl">
-                I build <span className="text-primary font-semibold">end-to-end digital products</span> — 
+                I build <span className="text-primary font-semibold">end-to-end digital products</span> - 
                 from sleek frontends to robust backends. Passionate about clean code, 
                 great UX, and scalable architecture.
               </p>
@@ -88,7 +89,7 @@ export default function Home() {
                   View My Work <FiArrowRight />
                 </Link>
                 <a
-                  href="/resume.pdf"
+                  href="/Ravindu_Wijerathna-CV.pdf"
                   download
                   className="btn-outline flex items-center gap-2"
                 >
@@ -114,11 +115,14 @@ export default function Home() {
                 <div className="absolute -top-2 -right-2 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-3 py-2 text-sm font-semibold shadow-xl flex items-center gap-2">
                   <span className="text-primary">⚡</span> Next.js
                 </div>
+                <div className="absolute -top-2 -left-2 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-3 py-2 text-sm font-semibold shadow-xl flex items-center gap-2">
+                  <span className="text-primary">⚡</span> Flutter
+                </div>
                 <div className="absolute -bottom-2 -left-2 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-3 py-2 text-sm font-semibold shadow-xl flex items-center gap-2">
                   <span className="text-accent">🔥</span> Node.js
                 </div>
                 <div className="absolute top-1/2 -right-8 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-3 py-2 text-sm font-semibold shadow-xl flex items-center gap-2">
-                  <span>🎨</span> React
+                  <span>🎨</span> Angular
                 </div>
               </div>
             </div>

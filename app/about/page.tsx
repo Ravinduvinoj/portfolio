@@ -59,7 +59,7 @@ export default function About() {
               <Link href="/projects" className="btn-primary flex items-center gap-2">
                 My Projects <FiArrowRight />
               </Link>
-              <a href="/resume.pdf" download className="btn-outline flex items-center gap-2">
+              <a href="/Ravindu_Wijerathna-CV.pdf" download className="btn-outline flex items-center gap-2">
                 Download CV
               </a>
             </div>
