@@ -1,27 +1,29 @@
 "use client";
 
 import { useState } from "react";
-import { FiMail, FiPhone, FiMapPin, FiGithub, FiLinkedin, FiTwitter, FiSend, FiCheck } from "react-icons/fi";
+import { AiFillTikTok } from "react-icons/ai";
+import { FiMail, FiPhone, FiMapPin, FiGithub, FiLinkedin, FiTwitter, FiSend, FiCheck, FiYoutube, FiFacebook } from "react-icons/fi";
 
 const contactInfo = [
-  { icon: FiMail, label: "Email", value: "ravindu@example.com", href: "mailto:ravindu@example.com" },
-  { icon: FiPhone, label: "Phone", value: "+94 77 123 4567", href: "tel:+94771234567" },
-  { icon: FiMapPin, label: "Location", value: "Colombo, Sri Lanka", href: "https://maps.google.com/?q=Colombo+Sri+Lanka" },
+  { icon: FiMail, label: "Email", value: "ravinduvinoj.se@gmail.com", href: "mailto:ravinduvinoj.se@gmail.com" },
+  { icon: FiPhone, label: "Phone", value: "+94 75 487 9867", href: "tel:+94754879867" },
+  { icon: FiMapPin, label: "Location", value: "Nittambuwa, Sri Lanka", href: "https://maps.app.goo.gl/Ch9Z8S3fjtRvMiRGA" },
 ];
 
 const socials = [
-  { icon: FiGithub, label: "GitHub", href: "https://github.com/ravinduvinoj", username: "@ravinduvinoj" },
-  { icon: FiLinkedin, label: "LinkedIn", href: "https://linkedin.com/in/ravinduvinoj", username: "Ravindu Vinoj" },
-  { icon: FiTwitter, label: "Twitter / X", href: "https://twitter.com/ravinduvinoj", username: "@ravinduvinoj" },
+  { icon: FiGithub, label: "GitHub", href: "https://github.com/Ravinduvinoj", username: "@ravinduvinoj" },
+  { icon: FiLinkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/ravindu-wijerathna-b299b325a", username: "Ravindu Vinoj" },
+  { icon: FiTwitter, label: "Twitter / X", href: "https://twitter.com/ravinduvinoj1", username: "@ravinduvinoj1" },
+  { icon: FiYoutube, label: "YouTube", href: "https://www.youtube.com/@ravinduvinoj", username: "Ravindu Vinoj" },
+  { icon: AiFillTikTok, label: "Twitter / X", href: "https://vt.tiktok.com/ZSQc6P1uY", username: "@ravinduvinoj" },
+    { icon: FiFacebook, label: "Facebook / X", href: "https://www.facebook.com/ravindu.vinoj.1/", username: "@ravinduvinoj1" },
 ];
 
 const services = [
-  "Frontend Development",
-  "Backend Development",
-  "Full Stack Development",
+  "Web Site Development",
+  "Web Based System Development",
   "Mobile App",
   "E-Commerce",
-  "Code Review / Consulting",
   "Other",
 ];
 
@@ -185,10 +187,10 @@ export default function Contact() {
                         className="w-full px-4 py-3 rounded-xl border border-[var(--border)] bg-[var(--bg-secondary)] text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/30 transition-all"
                       >
                         <option value="">Select budget</option>
-                        <option value="<500">Under $500</option>
-                        <option value="500-2000">$500 – $2,000</option>
-                        <option value="2000-5000">$2,000 – $5,000</option>
-                        <option value="5000+">$5,000+</option>
+                        <option value="<15000">Under 15000LKR</option>
+                        <option value="15000-50000">15000LKR – 50000LKR</option>
+                        <option value="50000-100000">50000LKR – 100000LKR</option>
+                        <option value="100000+">100000LKR+</option>
                         <option value="discuss">Let's Discuss</option>
                       </select>
                     </div>
