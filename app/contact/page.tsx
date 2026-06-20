@@ -39,10 +39,23 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    // Simulate sending
-    await new Promise((r) => setTimeout(r, 1500));
-    setLoading(false);
-    setSubmitted(true);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      setLoading(false);
+      if (res.ok && data.ok) {
+        setSubmitted(true);
+      } else {
+        alert('Failed to send message. Please try again later.');
+      }
+    } catch (err) {
+      setLoading(false);
+      alert('Failed to send message. Please check your connection.');
+    }
   };
 
   return (
