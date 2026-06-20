@@ -39,7 +39,7 @@ export default function About() {
               <img
                 src="/avatar.jpg"
                 alt="Ravindu Vinoj avatar"
-                className="w-48 h-48 rounded-2xl shadow-2xl glow-blue object-cover"
+                className="w-48 h-48 rounded-2xl shadow-2xl glow-blue object-cover z-10 relative"
               />
               <div className="absolute -bottom-3 -right-3 w-48 h-48 rounded-2xl border-2 border-dashed border-accent/40" />
             </div>
