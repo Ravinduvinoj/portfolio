@@ -162,7 +162,6 @@ export default function Contact() {
                       />
                     </div>
                   </div>
-
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
                       <label className="block text-sm font-medium mb-2">Service Needed</label>
@@ -208,7 +207,6 @@ export default function Contact() {
                       className="w-full px-4 py-3 rounded-xl border border-[var(--border)] bg-[var(--bg-secondary)] text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/30 transition-all resize-none placeholder:text-[var(--text-secondary)]"
                     />
                   </div>
-
                   <button
                     type="submit"
                     disabled={loading}

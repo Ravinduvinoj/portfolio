@@ -6,7 +6,7 @@ import { FiCode, FiServer, FiSmartphone, FiShoppingCart, FiRefreshCw, FiZap, FiA
 const services = [
   {
     icon: FiCode,
-    title: "Frontend Development",
+    title: "Web Site Development",
     tagline: "Pixel-perfect, blazing fast UIs",
     description:
       "Building responsive, accessible, and high-performance web interfaces using React, Next.js, and TypeScript. From landing pages to complex dashboards.",
@@ -20,26 +20,26 @@ const services = [
     ],
     color: "from-blue-500 to-cyan-500",
     accent: "primary",
-    popular: false,
-  },
-  {
-    icon: FiServer,
-    title: "Backend Development",
-    tagline: "Scalable APIs & server infrastructure",
-    description:
-      "Designing and building robust RESTful and GraphQL APIs, microservices, authentication systems, and cloud-native backends that scale.",
-    features: [
-      "Node.js / Express / NestJS APIs",
-      "RESTful & GraphQL endpoints",
-      "Authentication & Authorization (JWT, OAuth)",
-      "Database design (SQL & NoSQL)",
-      "Caching strategies with Redis",
-      "WebSocket real-time systems",
-    ],
-    color: "from-primary to-accent",
-    accent: "gradient",
     popular: true,
   },
+  // {
+  //   icon: FiServer,
+  //   title: "Backend Development",
+  //   tagline: "Scalable APIs & server infrastructure",
+  //   description:
+  //     "Designing and building robust RESTful and GraphQL APIs, microservices, authentication systems, and cloud-native backends that scale.",
+  //   features: [
+  //     "Node.js / Express / NestJS APIs",
+  //     "RESTful & GraphQL endpoints",
+  //     "Authentication & Authorization (JWT, OAuth)",
+  //     "Database design (SQL & NoSQL)",
+  //     "Caching strategies with Redis",
+  //     "WebSocket real-time systems",
+  //   ],
+  //   color: "from-primary to-accent",
+  //   accent: "gradient",
+  //   popular: true,
+  // },
   {
     icon: FiZap,
     title: "Full Stack Development",
@@ -60,7 +60,7 @@ const services = [
   },
   {
     icon: FiSmartphone,
-    title: "Mobile Development",
+    title: "Mobile Apps Development",
     tagline: "Cross-platform mobile apps",
     description:
       "Building iOS and Android apps using React Native and Expo, sharing up to 90% of code across platforms without sacrificing native performance.",
@@ -74,7 +74,7 @@ const services = [
     ],
     color: "from-green-500 to-emerald-500",
     accent: "primary",
-    popular: false,
+    popular: true,
   },
   {
     icon: FiShoppingCart,
@@ -94,24 +94,24 @@ const services = [
     accent: "accent",
     popular: false,
   },
-  {
-    icon: FiRefreshCw,
-    title: "Code Review & Consulting",
-    tagline: "Expert eyes on your codebase",
-    description:
-      "Architecture reviews, performance audits, code quality improvements, and technical consulting to level up your team and codebase.",
-    features: [
-      "Code quality & architecture review",
-      "Performance & security audit",
-      "Tech stack consultation",
-      "Refactoring legacy code",
-      "Team mentoring & workshops",
-      "Documentation writing",
-    ],
-    color: "from-pink-500 to-rose-500",
-    accent: "primary",
-    popular: false,
-  },
+  // {
+  //   icon: FiRefreshCw,
+  //   title: "Code Review & Consulting",
+  //   tagline: "Expert eyes on your codebase",
+  //   description:
+  //     "Architecture reviews, performance audits, code quality improvements, and technical consulting to level up your team and codebase.",
+  //   features: [
+  //     "Code quality & architecture review",
+  //     "Performance & security audit",
+  //     "Tech stack consultation",
+  //     "Refactoring legacy code",
+  //     "Team mentoring & workshops",
+  //     "Documentation writing",
+  //   ],
+  //   color: "from-pink-500 to-rose-500",
+  //   accent: "primary",
+  //   popular: false,
+  // },
 ];
 
 const process = [
