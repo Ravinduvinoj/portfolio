@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { FiArrowRight, FiDownload, FiCode, FiServer, FiSmartphone, FiDatabase } from "react-icons/fi";
 import { useEffect, useState } from "react";
 
@@ -107,7 +108,13 @@ export default function Home() {
                 {/* Avatar circle */}
                 <div className="relative w-72 h-72 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 border-2 border-primary/30 flex items-center justify-center m-6 glow-blue">
                   <div className="w-64 h-64 rounded-full bg-gradient-to-br from-primary to-accent opacity-20 absolute" />
-                  <span className="text-8xl font-black gradient-text relative z-10">RV</span>
+                  <Image
+                    src="/avatar.jpg"
+                    alt="Ravindu Wijerathna"
+                    width={256}
+                    height={256}
+                    className="w-64 h-64 rounded-full object-cover relative z-10"
+                  />
                 </div>
 
                 {/* Floating badges */}

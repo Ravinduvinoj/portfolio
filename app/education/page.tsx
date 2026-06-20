@@ -4,13 +4,13 @@ import { FiBook, FiAward, FiCalendar, FiMapPin } from "react-icons/fi";
 
 const education = [
   {
-    degree: "Bachelor of Science in Computer Science",
+    degree: "Bachelor of Information Technology (BIT)",
     institution: "University of Moratuwa",
     location: "Moratuwa, Sri Lanka",
     period: "2026 – Present",
-    grade: "Second Class Upper",
+    // grade: "Second Class Upper",
     description:
-      "Focused on software engineering, algorithms, data structures, and distributed systems. Final year project: A real-time collaborative code editor built with React and WebSockets.",
+      "Pursuing a BIT degree with a focus on software engineering, algorithms, and distributed systems. Currently in my first year with strong academic performance and active involvement in coding clubs and hackathons.",
     highlights: ["Data Structures & Algorithms", "Software Engineering", "Database Systems", "Computer Networks", "Distributed Systems"],
     icon: "🎓",
     type: "degree",
@@ -23,7 +23,7 @@ const education = [
     grade: "General Pass",
     description:
       "Focused on software engineering, algorithms, data structures, and distributed systems. Final year project: A real-time collaborative code editor built with React and WebSockets.",
-    highlights: ["Data Structures & Algorithms", "Software Engineering", "Database Systems", "Computer Networks", "Distributed Systems"],
+    highlights: ["Software Engineering", "Data Structures & Algorithms", "Database Systems", "Computer Networks", "Distributed Systems"],
     icon: "🎓",
     type: "degree",
   },
@@ -34,7 +34,7 @@ const education = [
     period: "2017 – 2020",
     grade: "1C pass, 2S passes",
     description:
-      "Studied Combined Mathematics, Physics, and ICT. Achieved top results in the district and secured placement at the University of Moratuwa.",
+      "Studied engineering technology subjects with a focus on practical applications. Developed strong problem-solving skills and a solid foundation in physics, mathematics, and ICT.",
     highlights: ["Science For Technology", "Engineering Technology", "ICT"],
     icon: "📚",
     type: "school",
@@ -46,7 +46,7 @@ const education = [
     period: "2006 – 2017",
     grade: "1A pass, 1B pass, 4C passes, 3S passes",
     description:
-      "Completed O/Ls with distinction in all 9 subjects, with a strong aptitude for mathematics and science.",
+      "Completed O/Ls with a focus on core subjects. Developed a strong academic foundation and participated in extracurricular activities like coding clubs and science fairs.",
     highlights: ["Mathematics", "Science", "Sinhala", "English"],
     icon: "🏫",
     type: "school",
