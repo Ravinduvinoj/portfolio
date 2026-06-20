@@ -1,19 +1,20 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
-const categories = ["All", "Frontend", "Backend", "Database", "DevOps", "Languages"];
+const categories = ["All", "Frontend", "Backend", "Database", "DevOps", "Languages", "Tools & IDEs"];
 
 const skills = [
   // Frontend
-  { name: "React", level: 92, category: "Frontend", icon: "⚛️", color: "#61dafb" },
-  { name: "Next.js", level: 90, category: "Frontend", icon: "▲", color: "#fff" },
-  { name: "TypeScript", level: 85, category: "Frontend", icon: "🔷", color: "#3178c6" },
-  { name: "Tailwind CSS", level: 93, category: "Frontend", icon: "🎨", color: "#38bdf8" },
-  { name: "Vue.js", level: 70, category: "Frontend", icon: "💚", color: "#42b883" },
+  { name: "React", level: 92, category: "Frontend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", color: "#61dafb" },
+  { name: "Next.js", level: 90, category: "Frontend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", color: "#fff" },
+  { name: "TypeScript", level: 85, category: "Frontend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", color: "#3178c6" },
+  { name: "Tailwind CSS", level: 93, category: "Frontend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg", color: "#38bdf8" },
+  { name: "JavaScript", level: 70, category: "Frontend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", color: "#42b883" },
   { name: "Redux", level: 80, category: "Frontend", icon: "🔄", color: "#764abc" },
   // Backend
-  { name: "Node.js", level: 88, category: "Backend", icon: "🟢", color: "#68a063" },
+  { name: "Node.js", level: 88, category: "Backend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg", color: "#68a063" },
   { name: "Express.js", level: 85, category: "Backend", icon: "🚂", color: "#fff" },
   { name: "Python", level: 78, category: "Backend", icon: "🐍", color: "#ffd43b" },
   { name: "REST APIs", level: 90, category: "Backend", icon: "🔗", color: "#60a5fa" },
@@ -25,7 +26,6 @@ const skills = [
   { name: "Redis", level: 68, category: "Database", icon: "⚡", color: "#dc382d" },
   // DevOps
   { name: "Docker", level: 76, category: "DevOps", icon: "🐳", color: "#2496ed" },
-  { name: "Git / GitHub", level: 92, category: "DevOps", icon: "🐙", color: "#f05032" },
   { name: "AWS", level: 65, category: "DevOps", icon: "☁️", color: "#ff9900" },
   { name: "Vercel", level: 88, category: "DevOps", icon: "▲", color: "#fff" },
   // Languages
@@ -35,6 +35,13 @@ const skills = [
   { name: "HTML5", level: 95, category: "Languages", icon: "🌐", color: "#e34c26" },
   { name: "CSS3", level: 90, category: "Languages", icon: "🎨", color: "#264de4" },
   { name: "SQL", level: 78, category: "Languages", icon: "📊", color: "#4479a1" },
+
+  //Tools & IDEs
+  { name: "Git", level: 88, category: "Tools & IDEs", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", color: "#f05032" },
+  { name: "GitHub", level: 92, category: "Tools & IDEs", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", color: "#f05032" },
+  { name: "VS Code", level: 90, category: "Tools & IDEs", icon: "🖥️", color: "#007acc" },
+  { name: "Postman", level: 80, category: "Tools & IDEs", icon: "📬", color: "#ff6c37" },
+  { name: "Jira", level: 70, category: "Tools & IDEs", icon: "📋", color: "#0052cc" },
 ];
 
 const techStack = [
@@ -96,11 +103,10 @@ export default function Skills() {
             <button
               key={cat}
               onClick={() => setActive(cat)}
-              className={`px-5 py-2 rounded-full text-sm font-semibold border transition-all duration-300 ${
-                active === cat
-                  ? "bg-primary text-white border-primary shadow-lg shadow-primary/30"
-                  : "border-[var(--border)] text-[var(--text-secondary)] hover:border-primary hover:text-primary"
-              }`}
+              className={`px-5 py-2 rounded-full text-sm font-semibold border transition-all duration-300 ${active === cat
+                ? "bg-primary text-white border-primary shadow-lg shadow-primary/30"
+                : "border-[var(--border)] text-[var(--text-secondary)] hover:border-primary hover:text-primary"
+                }`}
             >
               {cat}
             </button>
@@ -113,7 +119,17 @@ export default function Skills() {
             <div key={`${skill.name}-${skill.category}`} className="card group hover:-translate-y-1">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
-                  <span className="text-2xl">{skill.icon}</span>
+                  {typeof skill.icon === "string" && skill.icon.startsWith("http") ? (
+                    <Image
+                      src={skill.icon}
+                      alt={`${skill.name} logo`}
+                      width={28}
+                      height={28}
+                      className="rounded"
+                    />
+                  ) : (
+                    <span className="text-2xl">{skill.icon}</span>
+                  )}
                   <div>
                     <h3 className="font-bold text-sm">{skill.name}</h3>
                     <span className="tag text-xs">{skill.category}</span>

@@ -51,7 +51,7 @@ export default function Navbar({
           />
           <span className="font-bold text-lg hidden sm:block">
             <span className="text-primary">Ravindu</span>
-            <span className="text-accent">.</span>
+            {/* <span className="text-accent"> Wijerathna</span> */}
           </span>
         </Link>
 

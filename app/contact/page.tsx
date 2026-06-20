@@ -15,7 +15,7 @@ const socials = [
   { icon: FiLinkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/ravindu-wijerathna-b299b325a", username: "Ravindu Vinoj" },
   { icon: FiTwitter, label: "Twitter / X", href: "https://twitter.com/ravinduvinoj1", username: "@ravinduvinoj1" },
   { icon: FiYoutube, label: "YouTube", href: "https://www.youtube.com/@ravinduvinoj", username: "Ravindu Vinoj" },
-  { icon: AiFillTikTok, label: "Twitter / X", href: "https://vt.tiktok.com/ZSQc6P1uY", username: "@ravinduvinoj" },
+  { icon: AiFillTikTok, label: "TikTok", href: "https://vt.tiktok.com/ZSQc6P1uY", username: "@ravinduvinoj" },
     { icon: FiFacebook, label: "Facebook / X", href: "https://www.facebook.com/ravindu.vinoj.1/", username: "@ravinduvinoj1" },
 ];
 
@@ -91,7 +91,7 @@ export default function Contact() {
               <div className="space-y-4">
                 {socials.map(({ icon: Icon, label, href, username }) => (
                   <a
-                    key={label}
+                    key={href}
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
