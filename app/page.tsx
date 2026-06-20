@@ -79,8 +79,8 @@ export default function Home() {
               </div>
 
               <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-10 max-w-xl">
-                I build <span className="text-primary font-semibold">end-to-end digital products</span> - 
-                from sleek frontends to robust backends. Passionate about clean code, 
+                I build <span className="text-primary font-semibold">end-to-end digital products</span> -
+                from sleek frontends to robust backends. Passionate about clean code,
                 great UX, and scalable architecture.
               </p>
 
@@ -118,17 +118,43 @@ export default function Home() {
                 </div>
 
                 {/* Floating badges */}
-                <div className="absolute -top-2 -right-2 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-3 py-2 text-sm font-semibold shadow-xl flex items-center gap-2">
-                  <span className="text-primary">⚡</span> Next.js
+                <div className="absolute -top-2 -right-2 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-3 py-2 text-sm font-semibold shadow-xl flex items-center gap-2 z-20">
+                  <span className="text-primary">
+                    <Image
+                      src={"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"}
+                      alt={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg logo`}
+                      width={28}
+                      height={28}
+                      className="rounded"
+                    />
+                  </span> Next.js
                 </div>
-                <div className="absolute -top-2 -left-2 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-3 py-2 text-sm font-semibold shadow-xl flex items-center gap-2">
-                  <span className="text-primary">⚡</span> Flutter
+                <div className="absolute -top-2 -left-2 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-3 py-2 text-sm font-semibold shadow-xl flex items-center gap-2 z-20">
+                  <span className="text-primary"> <Image
+                      src={"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg"}
+                      alt={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg logo`}
+                      width={28}
+                      height={28}
+                      className="rounded"
+                    /></span> Flutter
                 </div>
-                <div className="absolute -bottom-2 -left-2 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-3 py-2 text-sm font-semibold shadow-xl flex items-center gap-2">
-                  <span className="text-accent">🔥</span> Node.js
+                <div className="absolute -bottom-2 -left-2 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-3 py-2 text-sm font-semibold shadow-xl flex items-center gap-2 z-20">
+                  <span className="text-accent"> <Image
+                      src={"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"}
+                      alt={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg logo`}
+                      width={28}
+                      height={28}
+                      className="rounded"
+                    /></span> Node.js
                 </div>
-                <div className="absolute top-1/2 -right-8 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-3 py-2 text-sm font-semibold shadow-xl flex items-center gap-2">
-                  <span>🎨</span> Angular
+                <div className="absolute top-1/2 -right-8 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-3 py-2 text-sm font-semibold shadow-xl flex items-center gap-2 z-20">
+                  <span> <Image
+                      src={"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"}
+                      alt={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg logo`}
+                      width={28}
+                      height={28}
+                      className="rounded"
+                    /></span> Angular
                 </div>
               </div>
             </div>

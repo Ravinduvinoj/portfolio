@@ -45,7 +45,7 @@ export default function Footer() {
           <p>
             Built with{" "}
             <span className="text-primary font-medium">Next.js</span> &{" "}
-            <span className="text-accent font-medium">Tailwind CSS</span>
+            {/* <span className="text-accent font-medium">Tailwind CSS</span> */}
           </p>
         </div>
       </div>
