@@ -36,9 +36,11 @@ export default function About() {
           {/* Left - bio */}
           <div className="animate-slide-in-left">
             <div className="relative mb-8">
-              <div className="w-48 h-48 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white text-6xl font-black shadow-2xl glow-blue">
-                RV
-              </div>
+              <img
+                src="/avatar.jpg"
+                alt="Ravindu Vinoj avatar"
+                className="w-48 h-48 rounded-2xl shadow-2xl glow-blue object-cover"
+              />
               <div className="absolute -bottom-3 -right-3 w-48 h-48 rounded-2xl border-2 border-dashed border-accent/40" />
             </div>
 

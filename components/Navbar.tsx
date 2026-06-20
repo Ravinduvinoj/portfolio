@@ -44,9 +44,11 @@ export default function Navbar({
       <div className="container-max flex items-center justify-between px-4 md:px-8 lg:px-16">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-sm shadow-lg group-hover:scale-110 transition-transform">
-            RV
-          </div>
+          <img
+            src="/avatar.jpg"
+            alt="Ravindu Vinoj"
+            className="w-9 h-9 rounded-xl shadow-lg object-cover group-hover:scale-110 transition-transform"
+          />
           <span className="font-bold text-lg hidden sm:block">
             <span className="text-primary">Ravindu</span>
             <span className="text-accent">.</span>
