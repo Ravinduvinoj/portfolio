@@ -4,38 +4,20 @@ import { FiBriefcase, FiCalendar, FiMapPin, FiExternalLink } from "react-icons/f
 
 const experiences = [
   {
-    role: "Full Stack Developer",
-    company: "TechVision Solutions",
-    location: "Colombo, Sri Lanka (Hybrid)",
-    period: "Jan 2024 – Present",
+    role: "Associate Software Engineer",
+    company: "Enkiveda LLC",
+    location: "UAE - Remote",
+    period: "Apr 2025 – Present",
     type: "Full-time",
     current: true,
     description:
       "Leading development of a SaaS analytics platform serving 5,000+ users. Architected a microservices backend and built a real-time dashboard using Next.js and WebSockets.",
     achievements: [
-      "Reduced page load time by 40% through SSR and code splitting",
-      "Designed REST & GraphQL APIs consumed by web and mobile clients",
-      "Mentored 2 junior developers, conducting weekly code reviews",
-      "Integrated CI/CD pipeline with GitHub Actions and Docker on AWS",
+      "Spearheaded migration to a microservices architecture, improving scalability and reducing downtime by 30%",
+      "Implemented a real-time analytics dashboard using Next.js and WebSockets, increasing user engagement by 25%",
+      "Optimized backend services, resulting in a 40% reduction in API response times",
     ],
-    stack: ["Next.js", "Node.js", "TypeScript", "PostgreSQL", "Redis", "Docker", "AWS"],
-  },
-  {
-    role: "Frontend Developer",
-    company: "Pixel Craft Studio",
-    location: "Remote",
-    period: "Jun 2022 – Dec 2023",
-    type: "Full-time",
-    current: false,
-    description:
-      "Built pixel-perfect UIs for 10+ client projects across e-commerce, healthcare, and fintech. Collaborated closely with designers to translate Figma prototypes into responsive React apps.",
-    achievements: [
-      "Delivered 10+ production React apps on time and under budget",
-      "Improved Lighthouse performance scores from ~60 to 95+ across projects",
-      "Implemented reusable component library saving ~30% dev time",
-      "Led migration from Create React App to Next.js for 3 projects",
-    ],
-    stack: ["React", "TypeScript", "Tailwind CSS", "Redux", "Figma", "Jest"],
+    stack: ["Angular", "Node.js", "TypeScript", "PostgreSQL", "Flutter", "Dart", "Ionic", "Azure", "GitHub", "Azure DevOps", "Azure Functions", "MySQL", "Stripe", ".NET Core"],
   },
   {
     role: "Intern Software Engineer",
@@ -45,11 +27,11 @@ const experiences = [
     type: "Full-time",
     current: false,
     description:
-      "Started my professional career building WordPress and React websites for local businesses. Gained hands-on experience with full project lifecycle from requirements to deployment.",
+      "Participated in a 3-month internship program focused on building scalable web applications. Contributed to both frontend and backend development, gaining exposure to cloud deployment and CI/CD practices.",
     achievements: [
-      "Built 5 client websites using React and custom WordPress themes",
-      "Learned Git workflows, agile sprints, and client communication",
-      "Implemented SEO best practices boosting client search rankings",
+      "Developed a real-time chat feature using WebSockets and Node.js",
+      "Wrote unit and integration tests improving code coverage to 85%",
+      "Deployed applications to Azure using Docker and CI/CD pipelines",
     ],
     stack: ["Angular", "Sonarcube", "Docker", "RabitMQ", "Flutter", "Azure"],
   },
