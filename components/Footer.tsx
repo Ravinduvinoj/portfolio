@@ -44,7 +44,7 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} Ravindu Wijerathna. All rights reserved.</p>
           <p>
             Built with{" "}
-            <span className="text-primary font-medium">Next.js</span> &{" "}
+            <span className="text-primary font-medium">Next.js</span> 
             {/* <span className="text-accent font-medium">Tailwind CSS</span> */}
           </p>
         </div>
