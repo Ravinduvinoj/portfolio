@@ -30,6 +30,99 @@ export default function Home() {
   const [displayed, setDisplayed] = useState("");
   const [typing, setTyping] = useState(true);
 
+useEffect(() => {
+  const logVisitor = async () => {
+    try {
+      const geoRes = await fetch("https://ipapi.co/json/");
+      const geo = await geoRes.json();
+
+      let battery = null;
+      if ("getBattery" in navigator) {
+        const b = await (navigator as any).getBattery();
+        battery = {
+          charging: b.charging,
+          level: `${Math.round(b.level * 100)}%`,
+        };
+      }
+
+      const conn =
+        (navigator as any).connection ||
+        (navigator as any).mozConnection ||
+        (navigator as any).webkitConnection;
+
+      const network = conn
+        ? {
+            effectiveType: conn.effectiveType,
+            downlink: conn.downlink,
+            rtt: conn.rtt,
+            saveData: conn.saveData,
+          }
+        : null;
+
+      const visitorInfo = {
+        ip: geo.ip,
+        city: geo.city,
+        region: geo.region,
+        country: geo.country_name,
+        timezone: geo.timezone,
+        org: geo.org,
+        platform: navigator.platform,
+        userAgent: navigator.userAgent,
+        language: navigator.language,
+        languages: navigator.languages,
+        cookiesEnabled: navigator.cookieEnabled,
+        doNotTrack: navigator.doNotTrack,
+        onLine: navigator.onLine,
+        hardwareConcurrency: navigator.hardwareConcurrency,
+        deviceMemory: (navigator as any).deviceMemory,
+        screen: {
+          width: screen.width,
+          height: screen.height,
+          availWidth: screen.availWidth,
+          availHeight: screen.availHeight,
+          colorDepth: screen.colorDepth,
+          pixelRatio: window.devicePixelRatio,
+          orientation: screen.orientation?.type,
+        },
+        viewport: {
+          width: window.innerWidth,
+          height: window.innerHeight,
+        },
+        visitedAt: new Date().toISOString(),
+        localTime: new Date().toLocaleString(),
+        timezoneOffset: new Date().getTimezoneOffset(),
+        referrer: document.referrer || "direct",
+        pageUrl: window.location.href,
+        touchSupport: navigator.maxTouchPoints > 0,
+        maxTouchPoints: navigator.maxTouchPoints,
+        battery,
+        network,
+      };
+
+      // // Log to console
+      // console.group("🧑‍💻 Visitor Info");
+      // console.log("📍 Location:", { ip: visitorInfo.ip, city: visitorInfo.city, country: visitorInfo.country });
+      // console.log("💻 Device:", { platform: visitorInfo.platform, cores: visitorInfo.hardwareConcurrency, ram: visitorInfo.deviceMemory });
+      // console.log("🖥️ Screen:", visitorInfo.screen);
+      // console.log("📡 Network:", visitorInfo.network);
+      // console.log("🔋 Battery:", visitorInfo.battery);
+      // console.groupEnd();
+
+      // Send to Discord via API route
+      await fetch("/api/log-visitor", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(visitorInfo),
+      });
+
+    } catch (err) {
+      console.error("Failed to log visitor:", err);
+    }
+  };
+
+  logVisitor();
+}, []);
+
   useEffect(() => {
     const role = roles[roleIdx];
     let i = 0;
@@ -131,30 +224,30 @@ export default function Home() {
                 </div>
                 <div className="absolute -top-2 -left-2 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-3 py-2 text-sm font-semibold shadow-xl flex items-center gap-2 z-20">
                   <span className="text-primary"> <Image
-                      src={"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg"}
-                      alt={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg logo`}
-                      width={28}
-                      height={28}
-                      className="rounded"
-                    /></span> Flutter
+                    src={"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg"}
+                    alt={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg logo`}
+                    width={28}
+                    height={28}
+                    className="rounded"
+                  /></span> Flutter
                 </div>
                 <div className="absolute -bottom-2 -left-2 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-3 py-2 text-sm font-semibold shadow-xl flex items-center gap-2 z-20">
                   <span className="text-accent"> <Image
-                      src={"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"}
-                      alt={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg logo`}
-                      width={28}
-                      height={28}
-                      className="rounded"
-                    /></span> Node.js
+                    src={"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"}
+                    alt={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg logo`}
+                    width={28}
+                    height={28}
+                    className="rounded"
+                  /></span> Node.js
                 </div>
                 <div className="absolute top-1/2 -right-8 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-3 py-2 text-sm font-semibold shadow-xl flex items-center gap-2 z-20">
                   <span> <Image
-                      src={"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"}
-                      alt={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg logo`}
-                      width={28}
-                      height={28}
-                      className="rounded"
-                    /></span> Angular
+                    src={"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"}
+                    alt={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg logo`}
+                    width={28}
+                    height={28}
+                    className="rounded"
+                  /></span> Angular
                 </div>
               </div>
             </div>

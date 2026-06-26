@@ -49,12 +49,12 @@ export default function About() {
             </h2>
 
             <p className="text-[var(--text-secondary)] leading-relaxed mb-4">
-              I'm Ravindu Vinoj, a Full Stack Developer based in Sri Lanka with 3+ years of experience building 
+              I'm Ravindu Vinoj, a Full Stack Developer based in Sri Lanka & United Arab Emirates with 1+ years of experience building 
               web and mobile applications. I love turning complex problems into elegant, user-friendly solutions.
             </p>
             <p className="text-[var(--text-secondary)] leading-relaxed mb-6">
               My journey started with a curiosity for how websites work, which evolved into a deep passion for 
-              building scalable systems. I specialize in React, Next.js, Node.js, and cloud-native architectures.
+              building scalable systems. I specialize in Angular, Next.js, Node.js, .Net Core, Flutter and cloud-native architectures.
             </p>
 
             <div className="flex gap-4 flex-wrap">
