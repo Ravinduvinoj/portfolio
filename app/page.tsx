@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FiArrowRight, FiDownload, FiCode, FiServer, FiSmartphone, FiDatabase } from "react-icons/fi";
 import { useEffect, useState } from "react";
+import { pingServer } from "@/app/actions/ping";
 
 const roles = [
   "Associate Software Engineer",
@@ -33,8 +34,9 @@ export default function Home() {
 useEffect(() => {
   const logVisitor = async () => {
     try {
-      const geoRes = await fetch("https://ipapi.co/json/");
-      const geo = await geoRes.json();
+      // Fetch real public IP client-side (this is the only visible call, but reveals nothing sensitive)
+      const ipRes = await fetch("https://api.ipify.org?format=json");
+      const { ip } = await ipRes.json();
 
       let battery = null;
       if ("getBattery" in navigator) {
@@ -50,26 +52,11 @@ useEffect(() => {
         (navigator as any).mozConnection ||
         (navigator as any).webkitConnection;
 
-      const network = conn
-        ? {
-            effectiveType: conn.effectiveType,
-            downlink: conn.downlink,
-            rtt: conn.rtt,
-            saveData: conn.saveData,
-          }
-        : null;
-
-      const visitorInfo = {
-        ip: geo.ip,
-        city: geo.city,
-        region: geo.region,
-        country: geo.country_name,
-        timezone: geo.timezone,
-        org: geo.org,
+      const payload = JSON.stringify({
+        ip, // ← pass real IP to server action
         platform: navigator.platform,
         userAgent: navigator.userAgent,
         language: navigator.language,
-        languages: navigator.languages,
         cookiesEnabled: navigator.cookieEnabled,
         doNotTrack: navigator.doNotTrack,
         onLine: navigator.onLine,
@@ -78,9 +65,6 @@ useEffect(() => {
         screen: {
           width: screen.width,
           height: screen.height,
-          availWidth: screen.availWidth,
-          availHeight: screen.availHeight,
-          colorDepth: screen.colorDepth,
           pixelRatio: window.devicePixelRatio,
           orientation: screen.orientation?.type,
         },
@@ -88,36 +72,24 @@ useEffect(() => {
           width: window.innerWidth,
           height: window.innerHeight,
         },
-        visitedAt: new Date().toISOString(),
         localTime: new Date().toLocaleString(),
-        timezoneOffset: new Date().getTimezoneOffset(),
         referrer: document.referrer || "direct",
         pageUrl: window.location.href,
         touchSupport: navigator.maxTouchPoints > 0,
         maxTouchPoints: navigator.maxTouchPoints,
         battery,
-        network,
-      };
-
-      // // Log to console
-      // console.group("🧑‍💻 Visitor Info");
-      // console.log("📍 Location:", { ip: visitorInfo.ip, city: visitorInfo.city, country: visitorInfo.country });
-      // console.log("💻 Device:", { platform: visitorInfo.platform, cores: visitorInfo.hardwareConcurrency, ram: visitorInfo.deviceMemory });
-      // console.log("🖥️ Screen:", visitorInfo.screen);
-      // console.log("📡 Network:", visitorInfo.network);
-      // console.log("🔋 Battery:", visitorInfo.battery);
-      // console.groupEnd();
-
-      // Send to Discord via API route
-      await fetch("/api/log-visitor", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(visitorInfo),
+        network: conn
+          ? {
+              effectiveType: conn.effectiveType,
+              downlink: conn.downlink,
+              rtt: conn.rtt,
+              saveData: conn.saveData,
+            }
+          : null,
       });
 
-    } catch (err) {
-      console.error("Failed to log visitor:", err);
-    }
+      await pingServer(payload);
+    } catch {}
   };
 
   logVisitor();
